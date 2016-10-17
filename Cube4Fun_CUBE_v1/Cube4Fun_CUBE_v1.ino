@@ -338,7 +338,7 @@ void processIn(unsigned char pc_input) {
   
 }
 
-// ---------------- MAIN --------------- //
+// ---------------- SETUP --------------- //
 void setup() {
   Rb.init(); //initialize Rainbowduino driver
   Wire.begin(2); // initialize wire connection as slave #2
@@ -356,7 +356,9 @@ void setup() {
   
   changeAnim(); // First random animation
 }
+// ---------------- SETUP --------------- //
 
+// ---------------- MAIN --------------- //
 
 void loop()  {
  
