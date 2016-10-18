@@ -17,8 +17,19 @@ Version 2 with ESP8266 instead of Arduino/Network
 
 ![alt text][overviewIMG1]
 
+## Requirements
+
+## Software
+
+### Cube
+The communication is working through I2C protocoll. 
+
+## Hardware
+Because most of the esp8266 boards are working with 3.3V and our Cube board is a regular ATMEGA328 with 5V, we need a voltage shifter. This is a basic schematic realized with a BSS138 MOSFET. Breakout boards are available on most popular sites. 
+
 ![alt_text][schematic1] 
 
+
 [logo]: http://cube4fun.net/images/Cube6-128j.png "Logo"
-[overviewIMG1]: http://cube4fun.net/images/Overview-Pic1.png "Overview"
+[overviewIMG1]: http://cube4fun.net/images/Overview-Pic2.png "Overview"
 [schematic1]: https://github.com/workinghard/Cube4Fun_v2/blob/master/img/Cube4Fun_Schematic.png "Schematic1"
