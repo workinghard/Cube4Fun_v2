@@ -38,7 +38,7 @@ The communication is working through I2C protocoll. The basic logic is very simp
 | End key   | 69:","<br>70:","<br>71:" "<br>72:" " |
 
 ## Hardware
-Because most of the esp8266 boards are working with 3.3V and our Cube board is a regular ATMEGA328 with 5V, we need a voltage shifter. This is a basic schematic realized with a BSS138 MOSFET. Breakout boards are available on most popular sites. 
+Because most of the esp8266 boards are working with 3.3V and our Cube board is a regular ATMEGA328 with 5V, we need a voltage shifter. This is a basic schematic realized with a BSS138 MOSFET. Breakout boards are available on most popular sites. There are also esp8266 boards with 5V logic shifter already on board. In that case, you don't need this schematic. Just connect SDA and SCL.
 
 ![alt_text][schematic1] 
 
