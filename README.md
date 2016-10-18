@@ -22,7 +22,14 @@ Version 2 with ESP8266 instead of Arduino/Network
 ## Software
 
 ### Cube
-The communication is working through I2C protocoll. 
+The communication is working through I2C protocoll. The basic logic is very simple:
+* Display programmed smooth animations
+* If a frame (full 64 led values) received, display it
+* 5 seconds timeout for the default state. (Currently displaying programmed animations) 
+
+#### Protocoll
+* Only listen, no call backs
+* valid format for a frame: "//??<64 color values>,,  "
 
 ## Hardware
 Because most of the esp8266 boards are working with 3.3V and our Cube board is a regular ATMEGA328 with 5V, we need a voltage shifter. This is a basic schematic realized with a BSS138 MOSFET. Breakout boards are available on most popular sites. 
