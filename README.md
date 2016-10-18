@@ -6,8 +6,8 @@ Version 2 with ESP8266 instead of Arduino/Network
 ## Index
  1. [Overview](#overview)
  2. [Requirements](#requirements)
- 3. [Software](##software)
- 4. [Hardware](##hardware)
+ 3. [Software](#software)
+ 4. [Hardware](#hardware)
 
 ## Overview
 * Create your own cool 3D animations and tag them
@@ -20,7 +20,6 @@ Version 2 with ESP8266 instead of Arduino/Network
 ## Requirements
 
 ## Software
-
 ### Cube
 The communication is working through I2C protocoll. The basic logic is very simple:
 * Display programmed smooth animations
@@ -29,7 +28,14 @@ The communication is working through I2C protocoll. The basic logic is very simp
 
 #### Protocoll
 * Only listen, no call backs
-* valid format for a frame: "//??<64 color values>,,  "
+* valid format for a frame: 
+
+
+| Key       | Position:"Value"         |
+| ---       | ---                      |
+| Start key | 0:"/"<br>1:"/"<br>2:"?"<br>3:"?" |
+| Payload   | 4-68:"0...255"           |
+| End key   | 69:","<br>70:","<br>71:" "<br>72:" " |
 
 ## Hardware
 Because most of the esp8266 boards are working with 3.3V and our Cube board is a regular ATMEGA328 with 5V, we need a voltage shifter. This is a basic schematic realized with a BSS138 MOSFET. Breakout boards are available on most popular sites. 
