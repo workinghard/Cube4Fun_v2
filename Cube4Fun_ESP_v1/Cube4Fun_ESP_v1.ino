@@ -66,8 +66,8 @@ unsigned long lastChangeTime = 0;
 int gi_pos = 0;
 
 // Initialize the WiFi server library
-const char* ssid = "Enjoy";
-const char* password = "iWLSpo8zZ3NS";
+const char* ssid = "........";
+const char* password = ".........";
 ESP8266WebServer server(SERVER_PORT);
 
 const char* www_username = "admin";
